@@ -1,0 +1,7 @@
+name: 'DomsCommands Xenforo Addon'
+description: Additional Xenforo Addon for DomsCommands
+main: com.domsplace.DomsCommandsXenforoAddon.DomsCommandsXenforoAddonPlugin
+authors: [Dominic, Jordan]
+website: http://domsplace.com/
+version: '1.00'
+softdepend: [DomsCommands]
