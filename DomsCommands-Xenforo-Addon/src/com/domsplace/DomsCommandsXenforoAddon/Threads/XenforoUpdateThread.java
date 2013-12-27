@@ -20,18 +20,14 @@ import com.domsplace.DomsCommands.Bases.DomsThread;
 import com.domsplace.DomsCommands.Objects.DomsPlayer;
 import com.domsplace.DomsCommandsXenforoAddon.DataManagers.XenforoManager;
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.bukkit.Bukkit;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
@@ -66,6 +62,7 @@ public class XenforoUpdateThread extends DomsThread {
         long start = getNow();
         while(start+TIMEOUT <= getNow() && player == null) {}
         this.stopThread();
+        this.deregister();
         if(player == null) return;
         
         boolean alreadyActivated = false;

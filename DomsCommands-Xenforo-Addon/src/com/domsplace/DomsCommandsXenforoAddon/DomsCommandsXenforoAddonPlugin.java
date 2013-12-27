@@ -20,7 +20,6 @@ import com.domsplace.DomsCommands.Bases.*;
 import com.domsplace.DomsCommands.DomsCommandsPlugin;
 import com.domsplace.DomsCommands.Objects.DomsCommandsAddon;
 import com.domsplace.DomsCommandsXenforoAddon.DataManagers.XenforoManager;
-import com.domsplace.DomsCommandsXenforoAddon.Listeners.XenforoVariableUpdateListener;
 import com.domsplace.DomsCommandsXenforoAddon.Threads.XenforoCheckThread;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
@@ -55,7 +54,6 @@ public class DomsCommandsXenforoAddonPlugin extends JavaPlugin {
             return;
         }
         
-        new XenforoVariableUpdateListener();
         new XenforoCheckThread();
         
         this.enabled = true;
